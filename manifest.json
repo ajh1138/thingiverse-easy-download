@@ -2,7 +2,7 @@
 	"manifest_version": 2,
 	"name": "Thingiverse Easy Download",
 	"version": "0.1.0",
-	"description": "Adds a direct download button to Thingiverse search results.",
+	"description": "Adds a direct download link to each Thingiverse search result.",
 	"author": "ajh1138@gmail.com",
 	"homepage-url": "https://github.com/ajh1138/thingiverse-easy-download",
 	"permissions": ["storage"],

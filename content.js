@@ -4,9 +4,7 @@ window.addEventListener('load', function (event) {
 
 
 function applyDownloadLinks() {
-	console.log("applying links...");
 	var thingCards = getThingCards();
-	console.log("thing cards", thingCards);
 	
 	thingCards.forEach((x) => {
 		let url = extractUrlFromThingCard(x);
@@ -17,9 +15,7 @@ function applyDownloadLinks() {
 
 function extractUrlFromThingCard(thingCard){
 	let link = thingCard.querySelector("a[class*='ThingCardBody__cardBodyWrapper']");
-	console.log("link:", link);
 	let url = link.href;
-	console.log("url: " + url );
 	return url;
 }
 
