@@ -1,5 +1,5 @@
 window.addEventListener('load', function (event) {
-	setInterval(() => {applyDownloadLinks()}, 4000);
+	setInterval(() => {applyDownloadLinks()}, 2000);
 });
 
 
@@ -7,8 +7,22 @@ function applyDownloadLinks() {
 	var thingCards = getThingCards();
 	
 	thingCards.forEach((x) => {
-		let url = extractUrlFromThingCard(x);
-		x.innerHTML += '<a href="' + url + '/zip">Download</a>';
+		let thingUrl = extractUrlFromThingCard(x);
+		let downloadUrl = thingUrl + "/zip";
+		
+		let newLink = document.createElement("a");
+		newLink.setAttribute("href", downloadUrl);
+		newLink.className = "button button-primary";
+		newLink.style.padding = "8px";
+		newLink.style.width = "auto";
+		newLink.style.color = "#ffffff";
+		newLink.style.margin = "5px";
+		
+		let newText = document.createTextNode("Download");
+		
+		newLink.appendChild(newText);
+
+		x.appendChild(newLink);
 		x.className += " tvedl";
 	});
 }
